@@ -39,4 +39,14 @@ public class WalletController {
 
         return ResponseEntity.ok(walletService.withdraw(mobileNumber, amount));
     }
+    
+    @PostMapping("/transfer")
+    public ResponseEntity<WalletResponseDTO> transferMoney(
+            @RequestParam String senderMobile,
+            @RequestParam String receiverMobile,
+            @RequestParam BigDecimal amount) {
+
+        WalletResponseDTO response = walletService.transferMoney(senderMobile, receiverMobile, amount);
+        return ResponseEntity.ok(response);
+    }
 }

@@ -7,4 +7,6 @@ public interface WalletService {
     WalletResponseDTO getWalletByMobile(String mobileNumber);
     WalletResponseDTO deposit(String mobileNumber, BigDecimal amount);
     WalletResponseDTO withdraw(String mobileNumber, BigDecimal amount);
+    WalletResponseDTO transferMoney(String senderMobile, String receiverMobile, BigDecimal amount);
+    
 }

@@ -21,7 +21,7 @@ import in.co.goodpay.api.service.PaymentService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/payments")
+@RequestMapping("/goodpay-api/payments")
 @RequiredArgsConstructor
 public class PaymentController {
 
