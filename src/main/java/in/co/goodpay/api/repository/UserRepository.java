@@ -8,7 +8,8 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+	
+	
     Optional<User> findByMobileNumber(String mobileNumber);
 
     List<User> findByStatus(String status); 
